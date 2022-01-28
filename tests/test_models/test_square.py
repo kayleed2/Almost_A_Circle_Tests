@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """Unittesting for the Square module/class
 Tests are done for each method of the class"""
-
-
 import pep8
 import unittest
 from models.base import Base
@@ -18,8 +16,8 @@ class TestClassSquare(unittest.TestCase):
         """
         pep8style = pep8.StyleGuide(quiet=True)
         result = pep8style.check_files(['models/square.py'])
-        self.assertEqual(result.total_errors, 0,
-                "Found code style errors (and warnings).")
+        self.assertEqual(result.total_errors,
+                         0, "Found code style errors (and warnings).")
 
     def tearDown(self):
         """
@@ -43,7 +41,6 @@ class TestClassSquare(unittest.TestCase):
         s1 = Square(10)
         self.assertEqual(s1.width, 10)
         s2 = Square(10, 0, 0, 12)
-
 
     def test_width_type(self):
         """
